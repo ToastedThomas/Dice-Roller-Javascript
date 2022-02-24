@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dice Roller by ToastedThomas</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="canvas" class="canvas">
+    <div class="titleBar">
+      <h1>-Dice Roller-</h1>
+      <div>
+        <img src="images/d6_1.png" />
+        <img src="images/d6_2.png" />
+        <img src="images/d6_3.png" />
+        <img src="images/d6_4.png" />
+        <img src="images/d6_5.png" />
+        <img src="images/d6_6.png" />
+      </div>
+    </div>
+    <div id="mainMenu" class="menu">
+      <div class="chooseDice">
+        <h3>Choose Your Dice</h3>
+        <div class="buttonHolder">
+          <button id="d6" type="button"><img src="images/d6_6.png" /><p>Six Sided</p></button>
+          <button id="d2" type="button"><img src="images/d6_2.png" /><p>Two sided</p></button>
+        </div> 
+      </div>
+      <div class="diceSettings">
+        <h3>Dice Settings</h3>
+        <h3>Selected Dice: <span id="selectedDice"></span></h3>
+        <div class="settingHolder">
+          <p>Number of dice: </p><input />
+        </div>
+      </div>
+      <div class="rollDice">
+        <div class="rollHolder">
+          <button id="diceRoll" type="button"><p>Roll Dice!</p></button>
+        </div>
+      </div>
+    </div>
+    <div id="diceTable">
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
