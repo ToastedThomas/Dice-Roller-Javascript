@@ -5,9 +5,12 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body id="canvas" class="canvas">
+    <div id="afterRollMenu" class="afterRollMenu">
+      <button id="menuButton" type="button">Back to menu</button>
+      <button id="reRollButton" type="button">Roll again!</button>
+    </div>
     <div class="titleBar">
-      <h1>-Dice Roller-</h1>
-      <div>
+      <div class="diceIcons">
         <img src="images/d6_1.png" />
         <img src="images/d6_2.png" />
         <img src="images/d6_3.png" />
@@ -15,13 +18,22 @@
         <img src="images/d6_5.png" />
         <img src="images/d6_6.png" />
       </div>
+      <h1>-Dice Roller-</h1>
+      <div class="diceIcons">
+        <img src="images/d6_6.png" />
+        <img src="images/d6_5.png" />
+        <img src="images/d6_4.png" />
+        <img src="images/d6_3.png" />
+        <img src="images/d6_2.png" />
+        <img src="images/d6_1.png" />
+      </div>
     </div>
     <div id="mainMenu" class="menu">
       <div class="chooseDice">
         <h3>Choose Your Dice</h3>
         <div class="buttonHolder">
           <button id="d6" type="button"><img src="images/d6_6.png" /><p>Six Sided</p></button>
-          <button id="d2" type="button"><img src="images/d6_2.png" /><p>Two sided</p></button>
+          <button id="d2" type="button"><img src="images/d2_1.png" /><p>Two sided</p></button>
         </div> 
       </div>
       <div class="diceSettings">

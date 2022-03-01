@@ -3,23 +3,26 @@
   color: #76d49e;
 }
 .titleBar { 
-  width: auto;
-  margin: 0px auto;
-  border: 2px solid #76d49e;
-  margin-bottom: 10px;
-}
-.titleBar h1 {
-  text-align: center;
-}
-.titleBar div {
-  width: auto;
+  width: 25%;
   display: flex;
   justify-content: center;
-  margin: 0px auto;
+  margin: 0px auto 10px auto;
+  border: 2px solid #76d49e;
 }
-.titleBar div img {
-  width: 64px;
-  padding: 5px;
+.titleBar h1 {
+  display: inline;
+  width: auto;
+  margin: auto 10px;
+}
+.diceIcons {
+  width: auto;
+  display: inline-flex;
+  margin: auto 0px;
+}
+.diceIcons img {
+  width: 16px;
+  height: 16px;
+  padding: 1px;
 }
 .menu {
   display: flex;
@@ -75,10 +78,14 @@
   height: 75px;
   margin: 10px auto 10px;
   background-color: #76d49e;
-}
-.rollHolder button p {
+  border-radius: 10px;
+  transition: background-color .2s;
   color: #151d28;
 }
+.rollHolder button:hover {
+  background-color: #2d9067;
+}
+
 #diceTable {
   display: none;
   flex-wrap: wrap;
@@ -95,4 +102,23 @@
   justify-content: center;
   margin: 0px auto;
   min-width: 128px;
+}
+.afterRollMenu {
+  position: fixed;
+  width: 100%;
+  left: 25%;
+  bottom: 7%;
+  display: none;
+}
+.afterRollMenu button {
+  width: 25%;
+  height: 60px;
+  background-color: #76d49e;
+  border-radius: 10px;
+  transition: background-color .2s;
+  color: #151d28;
+  font-size: 1.5em;
+}
+.afterRollMenu button:hover {
+  background-color: #2d9067;
 }

@@ -2,6 +2,8 @@ const diceButtons = [document.getElementById('d6'),
 document.getElementById('d2'), ]
 const availableDice = ['d6', 'd2']
 const rollDiceButton = document.getElementById('diceRoll');
+const reRollButton = document.getElementById('reRollButton');
+const homeButton = document.getElementById('menuButton');
 var diceType;
 var rolls = [];
 
@@ -16,14 +18,22 @@ element.onclick = function() {
 })
 rollDiceButton.onclick = function() {
   hideMenu();
+  clearTable();
   rollTheDice();
 }
-
+reRollButton.onclick = function() { rollDiceButton.click(); }
+homeButton.onclick = function() { 
+  clearTable();
+  document.getElementById('afterRollMenu').style.display = 'none';
+  document.getElementById('mainMenu').style.display = 'flex';
+  document.getElementById('diceTable').style.display = 'none';
+}
 function diceSelect(index) {
   document.getElementById('selectedDice').innerHTML = availableDice[index];
   diceType = availableDice[index]
 }
 function hideMenu() {
+  document.getElementById('afterRollMenu').style.display = 'block';
   document.getElementById('mainMenu').style.display = 'none';
   document.getElementById('diceTable').style.display = 'flex';
 }
@@ -44,7 +54,14 @@ function rollTheDice() {
   rolls.forEach((element, index) => {
     element = randomNum();
     console.log(element);
-    document.getElementById(index).src = 'images/d6_'+element+'.png';
+    document.getElementById(index).src = 'images/'+diceType+'_'+element+'.png';
+  })
+}
+function clearTable() {
+  rolls = [0];
+  diceToDelete = document.querySelectorAll('.diceOnTableHold');
+  diceToDelete.forEach(element => {
+    document.getElementById('diceTable').removeChild(element);
   })
 }
 function randomNum() {
