@@ -65,11 +65,11 @@
 }
 .rollDice {
   display: inline-block;
-  width: 28.5%;
+  width: 25.5%;
   height: 100%;
 }
 .rollHolder {
-  display: flexbox;
+  display: flex;
   width: 80%;
   margin: 10px auto 10px;
 }
@@ -121,4 +121,27 @@
 }
 .afterRollMenu button:hover {
   background-color: #2d9067;
+}
+.diceStats {
+  display: block;
+  width:  45%;
+  height: 10%;
+  border: 2px solid #76d49e;
+  margin: 0px auto 10px auto;
+}
+.diceStats h3 {
+  display: table;
+  margin: 10px auto;
+  width: auto;
+}
+.statsHolder {
+  display: flex;
+  width: 100%;
+  height: 8em;
+}
+.statsHolder div {
+  margin: 0px 10px;
+}
+.statSpacer {
+  width: 10%;
 }
