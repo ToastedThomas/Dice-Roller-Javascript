@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="diceStats">
-      <h3>Stats</h3>
+      <h3>Last Roll Stats</h3>
       <div class="statsHolder">
         <div>
           <p>Average roll</p>
@@ -56,13 +56,19 @@
           <button id="d8" type="button"><img src="images/d8_8.png" /><p>Eight sided</p></button>
           <button id="d10" type="button"><img src="images/d10_10.png" /><p>Ten sided</p></button>
           <button id="d12" type="button"><img src="images/d12_12.png" /><p>Twelve sided</p></button>
+          <button id="d20" type="button"><img src="images/d20_20.png" /><p>Twenty sided</p></button>
         </div> 
       </div>
       <div class="diceSettings">
         <h3>Dice Settings</h3>
         <h3>Selected Dice: <span id="selectedDice"></span></h3>
         <div class="settingHolder">
+          <div>
           <p>Number of dice: </p><input />
+          </div>
+          <div>
+          <p>Max roll highlighted: </p><input  id="crit" type="checkbox" />
+          </div>
         </div>
       </div>
       <div class="rollDice">

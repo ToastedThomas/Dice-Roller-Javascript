@@ -1,5 +1,5 @@
-const diceButtons = [document.getElementById('d6'), document.getElementById('d2'), document.getElementById('d8'), document.getElementById('d10'), document.getElementById('d12') ]
-const availableDice = ['d6', 'd2', 'd8', 'd10', 'd12']
+const diceButtons = [document.getElementById('d6'), document.getElementById('d2'), document.getElementById('d8'), document.getElementById('d10'), document.getElementById('d12'), document.getElementById('d20')]
+const availableDice = ['d6', 'd2', 'd8', 'd10', 'd12', 'd20']
 const rollDiceButton = document.getElementById('diceRoll');
 const reRollButton = document.getElementById('reRollButton');
 const homeButton = document.getElementById('menuButton');
@@ -45,6 +45,11 @@ function rollTheDice() {
     console.log(element);
     rollTotal += element;
     document.getElementById(index).src = 'images/'+diceType+'_'+element+'.png';
+    if (element == diceType.replace('d', '') && document.getElementById('crit').checked) {
+      console.log('crit')
+      document.getElementById(index).style.backgroundColor = '#F7EB36';
+      document.getElementById(index).style.borderRadius = '10px';
+    }
   })
   statsUpdate(rollTotal);
 }
@@ -66,6 +71,8 @@ function randomNum() {
     return (Math.floor(Math.random() * 10) + 1);
   } else if (diceType == 'd12') {
     return (Math.floor(Math.random() * 12) + 1);
+  } else if (diceType == 'd20') {
+    return (Math.floor(Math.random() * 20) + 1);
   }
 }
 function statsUpdate(rollTotal) {
