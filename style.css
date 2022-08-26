@@ -76,6 +76,10 @@
   height: fit-content;
   margin: auto 0px auto 0px;
 }
+.settingHolder div select {
+  height: fit-content;
+  margin: auto 0px;
+}
 .rollDice {
   display: inline-block;
   width: 25.5%;
@@ -161,4 +165,26 @@
 }
 .statSpacer {
   width: 10%;
+}
+
+.theme1 {
+  filter: opacity(0.5) drop-shadow(0 0 0 #E00901);
+}
+.theme2 {
+  filter: opacity(0.5) drop-shadow(0 0 0 #D900E0);
+}
+.theme3 {
+  filter: opacity(0.5) drop-shadow(0 0 0 #0113E0);
+}
+.theme4 {
+  filter: opacity(0.5) drop-shadow(0 0 0 #07CBE0);
+}
+.theme5 {
+  filter: opacity(0.5) drop-shadow(0 0 0 #26E000);
+}
+.theme6 {
+  filter: opacity(0.5) drop-shadow(0 0 0 #E0CC00);
+}
+.theme7 {
+  filter: opacity(0.5) drop-shadow(0 0 0 #F08F00);
 }

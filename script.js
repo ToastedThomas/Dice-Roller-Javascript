@@ -3,6 +3,7 @@ const availableDice = ['d6', 'd2', 'd8', 'd10', 'd12', 'd20']
 const rollDiceButton = document.getElementById('diceRoll');
 const reRollButton = document.getElementById('reRollButton');
 const homeButton = document.getElementById('menuButton');
+var diceTheme = document.getElementById('theme');
 var diceType;
 var rolls = [];
 
@@ -45,6 +46,9 @@ function rollTheDice() {
     console.log(element);
     rollTotal += element;
     document.getElementById(index).src = 'images/'+diceType+'_'+element+'.png';
+    if (diceTheme.value != 'default') {
+      document.getElementById(index).classList.add('theme' + diceTheme.value);
+    }
     if (element == diceType.replace('d', '') && document.getElementById('crit').checked) {
       console.log('crit')
       document.getElementById(index).style.backgroundColor = '#F7EB36';
